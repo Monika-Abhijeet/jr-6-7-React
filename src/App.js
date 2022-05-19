@@ -1,5 +1,6 @@
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import Home from "./components/home/home";
 function App() {
   return (
     <div className="App">
@@ -7,7 +8,7 @@ function App() {
         title="Shopping application"
         subtitle="one stop solution for all your groceries"
       ></Header>
-      <h1>This is a react application</h1>
+      <Home></Home>
       <Footer email="abc@gmail.com" address="bangalore"></Footer>
     </div>
   );

@@ -1,0 +1,7 @@
+.header-container {
+  height: 12vh;
+  background-color: red;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
