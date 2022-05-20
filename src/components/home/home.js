@@ -1,6 +1,6 @@
 import "./home.css";
 import Sidebar from "../sidebar/sidebar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 let employees = [
   {
@@ -24,11 +24,16 @@ let employees = [
 ];
 
 function Home() {
+  let navigate = useNavigate();
   let alertMe = () => {
     alert("hello!!! good morning");
   };
   let printName = () => {
     console.log("printing inside parent");
+  };
+
+  let goToDetails = (empId) => {
+    navigate(`/emp-details/${empId}`);
   };
   return (
     <div className="home-container">
@@ -49,7 +54,9 @@ function Home() {
                 <Link to={`/emp-details/${employee.empId}`}>
                   <td>{employee.empId}</td>
                 </Link>
-                <td>{employee.name}</td>
+                <td onClick={() => goToDetails(employee.empId)}>
+                  {employee.name}
+                </td>
                 <td>{employee.email}</td>
                 <td>{employee.phNo}</td>
               </tr>
