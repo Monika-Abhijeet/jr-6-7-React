@@ -7,3 +7,8 @@
 .home {
   background-color: aqua;
 }
+
+.table-custom {
+  width: auto;
+  float: left;
+}

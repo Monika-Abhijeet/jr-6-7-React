@@ -6,6 +6,7 @@ class Sidebar extends Component {
     this.state = {
       count: 0,
       title: "old title",
+      name: "hi",
     };
   }
   alertMe = () => {
@@ -20,9 +21,11 @@ class Sidebar extends Component {
   changeTitle = () => {
     this.setState({ title: this.props.title });
   };
-  changeName = () => {
-    this.props.getName();
+
+  changeName = (e) => {
+    this.setState({ name: e.target.value });
   };
+
   render() {
     return (
       <div className="sidebar-container">
@@ -35,12 +38,29 @@ class Sidebar extends Component {
         <button className="btn btn-danger" onClick={this.decrement}>
           Decrement
         </button>
-        <button className="btn btn-warning" onClick={this.changeTitle}>
+        <button
+          className="btn btn-warning"
+          onClick={() => this.setState({ title: this.props.title })}
+        >
           Change Title
         </button>
-        <button className="btn btn-info" onClick={this.changeName}>
+        <button className="btn btn-info" onClick={this.props.getName}>
           print name
         </button>
+        <div>
+          <label className="form-label" htmlFor="username">
+            Username
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            value={this.state.name}
+            onChange={(e) => {
+              this.changeName(e);
+            }}
+          />
+        </div>
+        My name is {this.state.name}
       </div>
     );
   }
