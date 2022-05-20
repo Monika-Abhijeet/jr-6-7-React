@@ -4,8 +4,8 @@ import Home from "./components/home/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
-import GoogleUI from "./components/google-ui/google-ui-demo";
 import EmployeeDetails from "./components/emp-details/emp-details";
+import MaterialUI from "./components/material-ui/material-ui";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/emp-details/:id" element={<EmployeeDetails />} />
-            <Route path="/ui" element={<GoogleUI />} />
+            <Route path="/ui" element={<MaterialUI />} />
           </Routes>
         </div>
       </BrowserRouter>
