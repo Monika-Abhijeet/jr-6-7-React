@@ -1,6 +1,18 @@
 import "./home.css";
+import Sidebar from "../sidebar/sidebar";
+
 function Home() {
-  return <div className="home-container">Home Component</div>;
+  let alertMe = () => {
+    alert("hello!!! good morning");
+  };
+  return (
+    <div className="home-container">
+      <Sidebar></Sidebar>
+      <button className="btn btn-primary" onClick={alertMe}>
+        Click
+      </button>
+    </div>
+  );
 }
 
 export default Home;
