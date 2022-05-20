@@ -1,5 +1,6 @@
 import "./home.css";
 import Sidebar from "../sidebar/sidebar";
+import { Link } from "react-router-dom";
 
 let employees = [
   {
@@ -45,7 +46,9 @@ function Home() {
           {employees.map((employee) => {
             return (
               <tr key={employee.empId}>
-                <td>{employee.empId}</td>
+                <Link to={`/emp-details/${employee.empId}`}>
+                  <td>{employee.empId}</td>
+                </Link>
                 <td>{employee.name}</td>
                 <td>{employee.email}</td>
                 <td>{employee.phNo}</td>

@@ -4,6 +4,8 @@ import Home from "./components/home/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
+import GoogleUI from "./components/google-ui/google-ui-demo";
+import EmployeeDetails from "./components/emp-details/emp-details";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/emp-details/:id" element={<EmployeeDetails />} />
+            <Route path="/ui" element={<GoogleUI />} />
           </Routes>
         </div>
       </BrowserRouter>
