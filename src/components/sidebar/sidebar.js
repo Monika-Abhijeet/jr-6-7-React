@@ -20,6 +20,9 @@ class Sidebar extends Component {
   changeTitle = () => {
     this.setState({ title: this.props.title });
   };
+  changeName = () => {
+    this.props.getName();
+  };
   render() {
     return (
       <div className="sidebar-container">
@@ -34,6 +37,9 @@ class Sidebar extends Component {
         </button>
         <button className="btn btn-warning" onClick={this.changeTitle}>
           Change Title
+        </button>
+        <button className="btn btn-info" onClick={this.changeName}>
+          print name
         </button>
       </div>
     );
