@@ -7,7 +7,8 @@ function Home() {
   };
   return (
     <div className="home-container">
-      <Sidebar></Sidebar>
+      <Sidebar title="hiiiiiii"></Sidebar>
+
       <button className="btn btn-primary" onClick={alertMe}>
         Click
       </button>

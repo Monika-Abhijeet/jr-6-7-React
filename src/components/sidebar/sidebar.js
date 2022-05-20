@@ -1,11 +1,11 @@
 import { Component } from "react";
 import "./sidebar.css";
 class Sidebar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       count: 0,
-      title: "Sidebar",
+      title: "old title",
     };
   }
   alertMe = () => {
@@ -18,7 +18,7 @@ class Sidebar extends Component {
     this.setState({ count: this.state.count - 1 });
   };
   changeTitle = () => {
-    this.setState({ title: "This is a new title" });
+    this.setState({ title: this.props.title });
   };
   render() {
     return (
