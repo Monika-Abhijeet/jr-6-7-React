@@ -15,7 +15,7 @@ function App() {
           title="Shopping application"
           subtitle="one stop solution for all your groceries"
         ></Header>
-        <div style={{ marginTop: "12vh" }}>
+        <div style={{ marginTop: "12vh", marginBottom: "6vh " }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
