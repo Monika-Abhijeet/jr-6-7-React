@@ -32,6 +32,10 @@ class Sidebar extends Component {
         <h1>{this.state.title}</h1>
         <h3>Count: {this.state.count}</h3>
         <p onClick={this.alertMe}>ALert</p>
+        <div className="error">This is an error inside sidebar</div>
+        {/* <div className={HomeStyles.success}>
+          This is an success inside sidebar
+        </div> */}
         <button className="btn btn-success" onClick={this.increment}>
           Increment
         </button>

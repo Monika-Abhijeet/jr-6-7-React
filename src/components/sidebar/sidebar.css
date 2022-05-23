@@ -5,3 +5,6 @@
   color: white;
   float: left;
 }
+.error {
+  background-color: black;
+}

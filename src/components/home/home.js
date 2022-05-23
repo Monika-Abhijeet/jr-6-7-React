@@ -1,4 +1,5 @@
 import "./home.css";
+import HomeStyles from "./home.module.css";
 import Sidebar from "../sidebar/sidebar";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -38,6 +39,15 @@ function Home() {
   return (
     <div className="home-container">
       <Sidebar title="hiiiiiii" getName={printName}></Sidebar>
+      <p className="intro-msg"> This is the employee details</p>
+      <p style={{ backgroundColor: "red", fontSize: "20px", color: "white" }}>
+        This is demo of inline css
+      </p>
+      <div className={HomeStyles.moduleDemo}>
+        This is a small desciption to show module css
+      </div>
+      <div className={HomeStyles.success}>This is a success message</div>
+      <div className="error">This is a failure message</div>
       <table className="table" style={{ width: "auto" }}>
         <thead>
           <tr>
