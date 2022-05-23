@@ -9,6 +9,7 @@ import MaterialUI from "./components/material-ui/material-ui";
 import ParentHook from "./components/hooks/parent";
 import ParentLifecycle from "./components/lifecycle-methods/parent-lifecycle";
 import FetchComponent from "./components/http/fetch";
+import AxiosRequest from "./components/http/axios";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/ui" element={<MaterialUI />} />
             <Route path="/hooks" element={<ParentHook />} />
             <Route path="http" element={<FetchComponent />} />
+            <Route path="/axios" element={<AxiosRequest />} />
             <Route path="/lifecycle" element={<ParentLifecycle />} />
           </Routes>
         </div>
