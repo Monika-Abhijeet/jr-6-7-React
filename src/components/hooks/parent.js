@@ -1,3 +1,4 @@
+import UseContextDemo from "./useContext";
 import UseEffectDemo from "./useEffect";
 import UseReducerDemo from "./useReducer";
 import UseRefDemo from "./useRef";
@@ -11,6 +12,7 @@ function ParentHook() {
       <UseReducerDemo />
       <UseEffectDemo title="hello world" />
       <UseRefDemo />
+      <UseContextDemo />
     </div>
   );
 }
