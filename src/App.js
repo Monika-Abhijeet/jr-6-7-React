@@ -6,6 +6,7 @@ import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import EmployeeDetails from "./components/emp-details/emp-details";
 import MaterialUI from "./components/material-ui/material-ui";
+import ParentHook from "./components/hooks/parent";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/emp-details/:id" element={<EmployeeDetails />} />
             <Route path="/ui" element={<MaterialUI />} />
+            <Route path="/hooks" element={<ParentHook />} />
           </Routes>
         </div>
       </BrowserRouter>
