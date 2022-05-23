@@ -7,6 +7,7 @@ import Contact from "./components/contact/contact";
 import EmployeeDetails from "./components/emp-details/emp-details";
 import MaterialUI from "./components/material-ui/material-ui";
 import ParentHook from "./components/hooks/parent";
+import ParentLifecycle from "./components/lifecycle-methods/parent-lifecycle";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/emp-details/:id" element={<EmployeeDetails />} />
             <Route path="/ui" element={<MaterialUI />} />
             <Route path="/hooks" element={<ParentHook />} />
+            <Route path="/lifecycle" element={<ParentLifecycle />} />
           </Routes>
         </div>
       </BrowserRouter>
