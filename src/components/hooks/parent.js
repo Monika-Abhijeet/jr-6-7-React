@@ -1,4 +1,6 @@
+import UseEffectDemo from "./useEffect";
 import UseReducerDemo from "./useReducer";
+import UseRefDemo from "./useRef";
 import UseStateDemo from "./useState";
 function ParentHook() {
   return (
@@ -7,6 +9,8 @@ function ParentHook() {
       <UseStateDemo />
       <h2>useReducer</h2>
       <UseReducerDemo />
+      <UseEffectDemo title="hello world" />
+      <UseRefDemo />
     </div>
   );
 }
