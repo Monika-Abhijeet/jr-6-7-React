@@ -61,9 +61,13 @@ function Home() {
           {employees.map((employee) => {
             return (
               <tr key={employee.empId}>
-                <Link to={`/emp-details/${employee.empId}`}>
-                  <td>{employee.empId}</td>
-                </Link>
+                <td>
+                  {" "}
+                  <Link to={`/emp-details/${employee.empId}`}>
+                    {employee.empId}
+                  </Link>
+                </td>
+
                 <td onClick={() => goToDetails(employee.empId)}>
                   {employee.name}
                 </td>

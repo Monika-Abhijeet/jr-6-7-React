@@ -12,6 +12,7 @@ import FetchComponent from "./components/http/fetch";
 import AxiosRequest from "./components/http/axios";
 import SignIn from "./components/signin/signin";
 import Signup from "./components/signin/signup";
+import ParentErrorBoundary from "./components/errorBoundary/parentErrorBoundary";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/lifecycle" element={<ParentLifecycle />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/error" element={<ParentErrorBoundary />} />
           </Routes>
         </div>
       </BrowserRouter>
