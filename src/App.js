@@ -13,6 +13,7 @@ import AxiosRequest from "./components/http/axios";
 import SignIn from "./components/signin/signin";
 import Signup from "./components/signin/signup";
 import ParentErrorBoundary from "./components/errorBoundary/parentErrorBoundary";
+import ErrorParent from "./components/errorBoundary/ErrorParent";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/error" element={<ParentErrorBoundary />} />
+            <Route path="/errorBoundary" element={<ErrorParent />} />
           </Routes>
         </div>
       </BrowserRouter>
