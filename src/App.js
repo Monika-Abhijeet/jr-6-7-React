@@ -11,6 +11,7 @@ import ParentLifecycle from "./components/lifecycle-methods/parent-lifecycle";
 import FetchComponent from "./components/http/fetch";
 import AxiosRequest from "./components/http/axios";
 import SignIn from "./components/signin/signin";
+import Signup from "./components/signin/signup";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/axios" element={<AxiosRequest />} />
             <Route path="/lifecycle" element={<ParentLifecycle />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
       </BrowserRouter>
