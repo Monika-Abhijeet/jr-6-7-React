@@ -21,13 +21,11 @@ function AxiosRequest() {
 
   //   put request
   let requestBody = {
-    id: 1,
-    title: "monika",
-    body: "details of monika",
-    userId: 1,
+   restaurant_id: 1,
+   email:"monu@gmail.com"
   };
   axios
-    .put("https://jsonplaceholder.typicode.com/posts/1", requestBody)
+    .post("http://localhost:8090/bookings", requestBody)
     .then((response) => console.log(response.data));
 
   // delete request

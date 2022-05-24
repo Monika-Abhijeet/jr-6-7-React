@@ -10,6 +10,7 @@ import ParentHook from "./components/hooks/parent";
 import ParentLifecycle from "./components/lifecycle-methods/parent-lifecycle";
 import FetchComponent from "./components/http/fetch";
 import AxiosRequest from "./components/http/axios";
+import SignIn from "./components/signin/signin";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="http" element={<FetchComponent />} />
             <Route path="/axios" element={<AxiosRequest />} />
             <Route path="/lifecycle" element={<ParentLifecycle />} />
+            <Route path="/signin" element={<SignIn />} />
           </Routes>
         </div>
       </BrowserRouter>
