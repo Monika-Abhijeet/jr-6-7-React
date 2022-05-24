@@ -15,6 +15,7 @@ import Signup from "./components/signin/signup";
 import ParentErrorBoundary from "./components/errorBoundary/parentErrorBoundary";
 import ErrorParent from "./components/errorBoundary/ErrorParent";
 import ParentRegularPure from "./components/pureComponent/parentRegPure";
+import ParenHoc from "./components/hoc/parentHoc";
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,7 @@ function App() {
             <Route path="/error" element={<ParentErrorBoundary />} />
             <Route path="/errorBoundary" element={<ErrorParent />} />
             <Route path="/pureDemo" element={<ParentRegularPure />} />
+            <Route path="/hoc" element={<ParenHoc />} />
           </Routes>
         </div>
       </BrowserRouter>
