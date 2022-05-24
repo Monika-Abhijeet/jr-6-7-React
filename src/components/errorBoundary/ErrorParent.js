@@ -10,8 +10,8 @@ function ErrorParent() {
     <div>
       <h1>Error boundary using react-error-boundary library</h1>
       <ErrorBoundary FallbackComponent={Fallback} onerror={errorHandler}>
-        {/* <Counter /> */}
-        <Hero heroName="Joker" />
+        <Counter />
+        {/* <Hero heroName="Joker" /> */}
       </ErrorBoundary>
     </div>
   );

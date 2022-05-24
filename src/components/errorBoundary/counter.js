@@ -14,7 +14,7 @@ function Counter() {
       }
     } catch (e) {
       console.log(e);
-      handleError();
+      handleError(e);
     }
   };
   return (
