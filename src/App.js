@@ -14,7 +14,7 @@ import SignIn from "./components/signin/signin";
 import Signup from "./components/signin/signup";
 import ParentErrorBoundary from "./components/errorBoundary/parentErrorBoundary";
 import ErrorParent from "./components/errorBoundary/ErrorParent";
-
+import ParentRegularPure from "./components/pureComponent/parentRegPure";
 function App() {
   return (
     <div className="App">
@@ -38,6 +38,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/error" element={<ParentErrorBoundary />} />
             <Route path="/errorBoundary" element={<ErrorParent />} />
+            <Route path="/pureDemo" element={<ParentRegularPure />} />
           </Routes>
         </div>
       </BrowserRouter>
