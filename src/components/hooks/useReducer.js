@@ -13,6 +13,11 @@ function UseReducerDemo() {
         };
     }
   };
+  const increment = () => {
+    return {
+      type: "INCREMENT",
+    };
+  };
   const [state, dispatch] = useReducer(reducer, { count: 0, showText: true });
   return (
     <div>
