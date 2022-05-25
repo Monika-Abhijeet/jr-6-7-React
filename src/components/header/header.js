@@ -12,7 +12,7 @@ function Header(props) {
         className="d-flex flex-row justify-content-around"
         style={{ width: "50%" }}
       >
-        <li onClick={() => dispatch(signin())}>Signin</li>
+        {/* <li onClick={() => dispatch(signin())}>Signin</li> */}
         <li onClick={() => dispatch(signout())}>Signout</li>
         <Link to="/">
           <li>Home</li>

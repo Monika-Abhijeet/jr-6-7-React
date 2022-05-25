@@ -1,7 +1,7 @@
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import EmployeeDetails from "./components/emp-details/emp-details";
@@ -18,10 +18,23 @@ import ParentRegularPure from "./components/pureComponent/parentRegPure";
 import ParenHoc from "./components/hoc/parentHoc";
 import CounterRedux from "./components/redux-demo/counter";
 import { useSelector } from "react-redux";
+
 function App() {
   const isLogged = useSelector((state) => state.isLogged);
   if (!isLogged) {
-    return <h1>User session has expired. please login to view the page</h1>;
+    return (
+      <BrowserRouter>
+        <div>
+          <h4>User session has expired. please login to view the page</h4>;
+          <button>
+            <Link to="/signin">Back to signin</Link>
+          </button>
+        </div>
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+      </BrowserRouter>
+    );
   }
   return (
     <div className="App">

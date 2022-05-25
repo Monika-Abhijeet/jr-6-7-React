@@ -1,7 +1,21 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useDispatch } from "react-redux";
+import { signin } from "../react-redux/actions";
+import { useNavigate } from "react-router-dom";
+
 function SignIn() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  let username = "monika@gmail.com";
+  let password = "monika123";
   let handleSubmit = (values) => {
-    console.log(values);
+    if (values.email === username && values.password === password) {
+      alert("login successfull");
+      dispatch(signin());
+      navigate("/");
+    } else {
+      alert("login failed.. please enter valid credentials");
+    }
   };
   let handleValidate = (values) => {
     const errors = {};
