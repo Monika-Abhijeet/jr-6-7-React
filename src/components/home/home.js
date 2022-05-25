@@ -2,6 +2,7 @@ import "./home.css";
 import HomeStyles from "./home.module.css";
 import Sidebar from "../sidebar/sidebar";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 let employees = [
   {
@@ -25,6 +26,7 @@ let employees = [
 ];
 
 function Home() {
+  const isLogged = useSelector((state) => state.isLogged);
   let navigate = useNavigate();
   let alertMe = () => {
     alert("hello!!! good morning");
@@ -36,6 +38,10 @@ function Home() {
   let goToDetails = (empId) => {
     navigate(`/emp-details/${empId}`);
   };
+  if (!isLogged) {
+    return <div>Please login to view this page</div>;
+  }
+
   return (
     <div className="home-container">
       <Sidebar title="hiiiiiii" getName={printName}></Sidebar>

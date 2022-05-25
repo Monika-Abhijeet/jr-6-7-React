@@ -16,7 +16,13 @@ import ParentErrorBoundary from "./components/errorBoundary/parentErrorBoundary"
 import ErrorParent from "./components/errorBoundary/ErrorParent";
 import ParentRegularPure from "./components/pureComponent/parentRegPure";
 import ParenHoc from "./components/hoc/parentHoc";
+import CounterRedux from "./components/redux-demo/counter";
+import { useSelector } from "react-redux";
 function App() {
+  const isLogged = useSelector((state) => state.isLogged);
+  if (!isLogged) {
+    return <h1>User session has expired. please login to view the page</h1>;
+  }
   return (
     <div className="App">
       <BrowserRouter>
@@ -41,6 +47,7 @@ function App() {
             <Route path="/errorBoundary" element={<ErrorParent />} />
             <Route path="/pureDemo" element={<ParentRegularPure />} />
             <Route path="/hoc" element={<ParenHoc />} />
+            <Route path="/redux" element={<CounterRedux />} />
           </Routes>
         </div>
       </BrowserRouter>
