@@ -18,24 +18,10 @@ import ParentRegularPure from "./components/pureComponent/parentRegPure";
 import ParenHoc from "./components/hoc/parentHoc";
 import CounterRedux from "./components/redux-demo/counter";
 import { useSelector } from "react-redux";
+import AdminHome from "./components/adminHome/adminhome";
+import ListUsers from "./components/adminHome/ListUsers";
 
 function App() {
-  const isLogged = useSelector((state) => state.isLogged);
-  if (!isLogged) {
-    return (
-      <BrowserRouter>
-        <div>
-          <h4>User session has expired. please login to view the page</h4>;
-          <button>
-            <Link to="/signin">Back to signin</Link>
-          </button>
-        </div>
-        <Routes>
-          <Route path="/signin" element={<SignIn />} />
-        </Routes>
-      </BrowserRouter>
-    );
-  }
   return (
     <div className="App">
       <BrowserRouter>
@@ -61,6 +47,8 @@ function App() {
             <Route path="/pureDemo" element={<ParentRegularPure />} />
             <Route path="/hoc" element={<ParenHoc />} />
             <Route path="/redux" element={<CounterRedux />} />
+            <Route path="/admin" element={<AdminHome />} />
+            <Route path="/list-users" element={<ListUsers />} />
           </Routes>
         </div>
       </BrowserRouter>
